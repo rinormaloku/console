@@ -789,6 +789,20 @@ export const StorageClassModel: K8sKind = {
   id: 'storageclass',
 };
 
+export const TenantModel: K8sKind = {
+  label: 'Tenants',
+  labelKey: 'public~Tenants',
+  labelPlural: 'Tenants',
+  labelPluralKey: 'public~Tenants',
+  apiVersion: 'v1',
+  apiGroup: 'tenant.paas.redhat.com',
+  plural: 'tenants',
+  namespaced: false,
+  abbr: 'tn',
+  kind: 'Tenant',
+  id: 'tenants',
+};
+
 export const ClusterServiceBrokerModel: K8sKind = {
   label: 'ClusterServiceBroker',
   // t('public~ClusterServiceBroker')

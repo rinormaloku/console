@@ -637,6 +637,17 @@ export type MachineKind = {
   };
 } & K8sResourceCommon;
 
+export type TenantSpec = {
+  tenantAdmins: string[];
+};
+
+export type TenantKind = {
+  spec: TenantSpec;
+  status?: {
+    state?: string;
+  };
+} & K8sResourceCommon;
+
 export type MachineSetKind = {
   spec: {
     replicas: number;

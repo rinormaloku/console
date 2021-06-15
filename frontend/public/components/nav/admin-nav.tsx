@@ -261,6 +261,18 @@ const AdminNav = () => {
       />
 
       <NavSection
+        id="tenant"
+        title={t('public~Tenant')}
+        data-quickstart-id="qs-nav-tenant"
+      > 
+        <ResourceClusterLink
+          id="tenants"
+          resource="tenants"
+          name={t('public~Tenants')}
+        />
+      </NavSection>
+
+      <NavSection
         id="servicecatalog"
         title={t('public~Service Catalog')}
         required={FLAGS.SERVICE_CATALOG}

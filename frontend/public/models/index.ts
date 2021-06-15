@@ -801,7 +801,6 @@ export const TenantModel: K8sKind = {
   abbr: 'tn',
   kind: 'Tenant',
   crd: true,
-  id: 'tenants',
 };
 
 export const ClusterServiceBrokerModel: K8sKind = {

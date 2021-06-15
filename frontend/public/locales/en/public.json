@@ -1046,6 +1046,7 @@
   "VolumeSnapshots": "VolumeSnapshots",
   "VolumeSnapshotClasses": "VolumeSnapshotClasses",
   "Pipelines": "Pipelines",
+  "Tenant": "Tenant",
   "Service Catalog": "Service Catalog",
   "Provisioned Services": "Provisioned Services",
   "Broker Management": "Broker Management",
@@ -1666,5 +1667,6 @@
   "default": "default",
   "OK": "OK",
   "Disabled": "Disabled",
-  "Enabled": "Enabled"
+  "Enabled": "Enabled",
+  "Tenants": "Tenants"
 }

@@ -20,6 +20,7 @@ import {
   UserModel,
   VolumeSnapshotModel,
   VolumeSnapshotClassModel,
+  TenantModel,
 } from '../../models';
 
 import { referenceForModel } from '../../module/k8s';
@@ -259,6 +260,18 @@ const AdminNav = () => {
         title={t('public~Pipelines')}
         data-quickstart-id="qs-nav-pipelines"
       />
+
+      <NavSection
+        id="tenant"
+        title={t('public~Tenant')}
+        data-quickstart-id="qs-nav-tenant"
+      > 
+        <ResourceClusterLink
+          id="tenants"
+          resource={referenceForModel(TenantModel)}
+          name={t('public~Tenants')}
+        />
+      </NavSection>
 
       <NavSection
         id="servicecatalog"

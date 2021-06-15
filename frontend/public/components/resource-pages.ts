@@ -60,6 +60,7 @@ import {
   ServiceMonitorModel,
   StatefulSetModel,
   StorageClassModel,
+  TenantModel,
   TemplateInstanceModel,
   UserModel,
   VolumeSnapshotModel,
@@ -306,6 +307,11 @@ export const baseDetailsPages = ImmutableMap<ResourceMapKey, ResourceMapValue>()
   .set(referenceForModel(StorageClassModel), () =>
     import('./storage-class' /* webpackChunkName: "storage-class" */).then(
       (m) => m.StorageClassDetailsPage,
+    ),
+  )
+  .set(referenceForModel(TenantModel), () =>
+    import('./tenant' /* webpackChunkName: "tenant" */).then(
+      (m) => m.TenantDetailsPage,
     ),
   )
   .set(referenceForModel(TemplateInstanceModel), () =>

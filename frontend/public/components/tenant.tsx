@@ -30,11 +30,10 @@ const tableColumnClasses = [
 ];
 
 const TenantDetails: React.FC<TenantDetailsProps> = ({ obj }) => {
-  const { t } = useTranslation();
   return (
     <>
       <div className="co-m-pane__body">
-        <SectionHeading text={t('Tenants')} />
+        <SectionHeading text='Tenant +' />
         <div className="row">
           <div className="col-sm-6">
             <ResourceSummary resource={obj}>
@@ -101,7 +100,7 @@ TenantList.displayName = 'TenantList';
 
 export const TenantPage: React.FC<TenantPageProps> = (props) => {
   const createProps = {
-    to: '/k8s/cluster/tenant/~new/form',
+    to: '/k8s/cluster/' + referenceForModel(TenantModel) + '/~new/form',
   };
   return (
     <ListPage
@@ -132,7 +131,6 @@ export type TenantDetailsProps = {
 
 export type TenantPageProps = {
   filterLabel: string;
-  namespace: string;
 };
 
 export type TenantDetailsPageProps = {

@@ -798,8 +798,22 @@ export const TenantModel: K8sKind = {
   apiGroup: 'tenant.paas.redhat.com',
   plural: 'tenants',
   namespaced: false,
-  abbr: 'tn',
+  abbr: 'tnt',
   kind: 'Tenant',
+  crd: true,
+};
+
+export const TenantNamespaceModel: K8sKind = {
+  label: 'TenantNamespaces',
+  labelKey: 'public~TenantNamespaces',
+  labelPlural: 'TenantNamespaces',
+  labelPluralKey: 'public~TenantNamespaces',
+  apiVersion: 'v1alpha1',
+  apiGroup: 'tenant.paas.redhat.com',
+  plural: 'tenantnamespaces',
+  namespaced: true,
+  abbr: 'tntn',
+  kind: 'TenantNamespace',
   crd: true,
 };
 

@@ -21,6 +21,7 @@ import {
   VolumeSnapshotModel,
   VolumeSnapshotClassModel,
   TenantModel,
+  TenantNamespaceModel,
 } from '../../models';
 
 import { referenceForModel } from '../../module/k8s';
@@ -108,6 +109,7 @@ const AdminNav = () => {
   // Switch to that namespace so the list isn't empty.
   // If "all projects" was last selected, however, use "all projects" instead.
   const machineNS = lastNamespace === ALL_NAMESPACES_KEY ? lastNamespace : 'openshift-machine-api';
+  
   const { t } = useTranslation();
   return (
     <>
@@ -271,6 +273,13 @@ const AdminNav = () => {
           resource={referenceForModel(TenantModel)}
           name={t('public~Tenants')}
         />
+
+      <HrefLink
+          id="tenantnamespaces"
+          href={formatNamespacedRouteForResource(referenceForModel(TenantNamespaceModel), lastNamespace)}
+          name="Tenant Namespaces"
+        />
+
       </NavSection>
 
       <NavSection
